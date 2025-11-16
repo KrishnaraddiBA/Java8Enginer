@@ -1,0 +1,86 @@
+package OccourencesOfEachCharacter;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+import java.util.stream.IntStream;
+import java.util.stream.Stream;
+
+public class A {
+
+	public static void main(String[] args) {
+		String s="krishnaraddi";
+//		Map<String, Long> collect = Arrays.stream(s.split("")).collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+////
+//		Map<String, Long> collect2 = s.chars().mapToObj(s1->(char)s1).collect(Collectors.groupingBy(s2->s2.toString(),Collectors.counting()));
+//		collect2.forEach((x,y)->System.out.println(x+" "+y));
+		
+		//to print all the duplicates in the string
+		
+//		List<String> collect = s.chars().mapToObj(s1->(char)s1).collect(Collectors.groupingBy(s2->s2.toString(),Collectors.counting())).entrySet().stream().filter(k->k.getValue()>1).map(k1->k1.getKey()).collect(Collectors.toList());
+//	
+//	collect.forEach(System.out::println);
+		
+//		List<String> collect = Arrays.stream(s.split("")).collect(Collectors.groupingBy(s1->s1,Collectors.counting())).entrySet().stream().filter(s1->s1.getValue()==1).map(s3->s3.getKey()+" "+s3.getValue()).collect(Collectors.toList());
+//		collect.forEach(System.out::println);
+		
+		//to find a first non repeating value
+		
+//		List<String> collect = s.chars().mapToObj(s1->(char)s1).collect(Collectors.groupingBy(s2->s2.toString(),Collectors.counting())).entrySet().stream().filter(x1->x1.getValue()>1).map(x2->x2.getKey()).collect(Collectors.toList());
+//		collect.forEach(System.out::println);
+		
+		//to find a first non repeating character
+		
+//		String key = s.chars().mapToObj(x->(char)x).collect(Collectors.groupingBy(x1->x1.toString(),Collectors.counting())).entrySet().stream().filter(k->k.getValue()==1).findFirst().get().getKey();
+//		System.out.println(key);
+		
+		//second highest salary
+		
+		int[]a= {10,80,20,30,40,50};
+		List<Integer> list = Arrays.stream(a).boxed().toList();
+	
+//		 Integer integer = list.stream().distinct().sorted(Comparator.reverseOrder()).skip(1).findFirst().get();
+////		list2.forEach(System.out::println);
+//	
+//		 System.out.println(integer);
+		
+		//second smallest salary
+//		Integer integer = list.stream().distinct().sorted().skip(1).findFirst().get();
+//		System.out.println(integer);
+		
+		//to find a longest string in an array
+		
+		String[]s1= {"java","techie","springboot","mmicroservices"};
+		
+//		Map<String, Long> collect = Stream.of(s1).reduce((x,y)->{return x.length()>y.length()?x:y;}).get().chars().mapToObj(x1->(char)x1).collect(Collectors.groupingBy(s4->s4.toString(),Collectors.counting()));
+//		collect.forEach((x,y)->System.out.println(x+" "+y));
+		
+		//longest string
+		
+//		String string = Stream.of(s1).reduce((x,y)->{return x.length()>y.length()?x:y;}).get();
+//		System.out.println(string);
+		
+//		//find all the elements from array who starts with 1
+//		int[]a1= {5,9,11,2,8,21,1};
+//		Integer[] array = Arrays.stream(a1).boxed().toArray(Integer[]::new);
+//		
+//		Map<Character, Long> collect = Stream.of(array).map(x->x+"").filter(s2->s2.startsWith("1")).collect(Collectors.groupingBy(x->x.charAt(0),Collectors.counting()));
+//
+//		collect.forEach((x,y)->System.out.println(x+" "+y));
+		
+		//string joining example
+//		String s9="i love krishnaraddi";
+//		String[] split = s9.split(" ");
+//		
+//		String collect = Stream.of(split).collect(Collectors.joining());
+//		System.out.println(collect);
+		
+		IntStream.rangeClosed(1, 10).skip(2).limit(8).forEach(System.out::println);
+		
+		
+	}
+	
+}
